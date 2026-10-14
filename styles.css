@@ -1,0 +1,278 @@
+/* ---------- Estilos generales ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  min-height: 60vh;
+}
+
+.texto-centrado {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+a {
+  color: #d84315;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  color: #3e2723;
+  margin-bottom: 25px;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #3e2723;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+/* ---------- Navegación ---------- */
+nav {
+  background-color: #6d4c41;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.activo {
+  background-color: #d84315;
+}
+
+/* ---------- Inicio ---------- */
+.hero {
+  max-width: 100%;
+  background-color: #6d4c41;
+  background-image: url("https://picsum.photos/seed/hero/1400/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 20px;
+}
+
+.hero-texto {
+  background-color: #3e2723;
+  color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.hero-texto h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* ---------- Productos (Flexbox) ---------- */
+#productos {
+  max-width: 100%;
+  background-color: #efebe9;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #bcaaa4;
+  flex: 1 1 220px;
+  max-width: 260px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #3e2723;
+  margin-bottom: 5px;
+}
+
+.precio {
+  color: #d84315;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ---------- Reseñas (Grid) ---------- */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.resena {
+  background-color: #ffe0b2;
+  padding: 20px;
+  border-left: 5px solid #d84315;
+}
+
+.resena cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.resena-grande {
+  grid-column: span 2;
+}
+
+/* ---------- Contacto ---------- */
+.contacto-contenedor {
+  display: flex;
+  gap: 30px;
+}
+
+.contacto-info {
+  flex: 1;
+}
+
+.contacto-info h3 {
+  color: #3e2723;
+  margin-bottom: 10px;
+}
+
+.contacto-info p {
+  margin-bottom: 10px;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #efebe9;
+  padding: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8d6e63;
+  font-size: 1rem;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d84315;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bf360c;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #3e2723;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Media Queries ---------- */
+
+/* Tablets */
+@media (max-width: 800px) {
+  .resenas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resena-grande {
+    grid-column: span 2;
+  }
+
+  .contacto-contenedor {
+    flex-direction: column;
+  }
+}
+
+/* Celulares */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .resenas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resena-grande {
+    grid-column: span 1;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

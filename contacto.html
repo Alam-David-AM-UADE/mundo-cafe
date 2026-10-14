@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Mundo Café</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos externa (compartida por todas las páginas) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mundo Café</h1>
+    <p>Café de especialidad para tu día a día</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="resenas.html">Reseñas</a></li>
+      <li><a href="ubicacion.html">Ubicación</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contacto-contenedor">
+        <div class="contacto-info">
+          <h3>Escribinos</h3>
+          <p>¿Tenés dudas sobre algún producto? Completá el formulario y te respondemos pronto.</p>
+          <p>Horario: lunes a viernes de 9 a 18 h.</p>
+        </div>
+
+        <!-- Reemplazá TU_ID_AQUI por el ID de tu formulario de Formspree -->
+        <form action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 Mundo Café. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
